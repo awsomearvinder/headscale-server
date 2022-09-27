@@ -27,7 +27,7 @@
   services.headscale.serverUrl = "https://headscale.arvinderd.com:443";
   services.headscale.tls.letsencrypt.hostname = "headscale.arvinderd.com";
   services.headscale.port = 443;
-  services.headscale.aclPolicyFile = builtins.toFile (builtins.toJson {
+  services.headscale.dns.baseDomain = "headscale.arvinderd.com";
   services.headscale.aclPolicyFile = builtins.toFile "acl.yaml" (builtins.toJSON {
     groups = {
       "groups:admin" = ["arvinder"];
