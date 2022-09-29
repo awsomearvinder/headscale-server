@@ -10,7 +10,7 @@
     nixosConfigurations.headscale = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./configuration.nix
+        ./src/configuration.nix
         {
           _module.args.nixinate = {
             host = "192.9.250.176";
